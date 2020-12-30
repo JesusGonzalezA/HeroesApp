@@ -28,7 +28,7 @@ export const HeroScreen = ({history}) => {
     
     return (
         <div className="row mt-5">
-            <div className="col-4">
+            <div className="col-4  animate__animated animate__fadeInLeft">
                 <img 
                     src={`../assets/heroes/${heroId}.jpg`}
                     className="img-thumbnail"
