@@ -1,23 +1,27 @@
-import React, {useState} from 'react'
-import { heroes } from '../../data/heroes'
+import React, { useMemo } from 'react'
+import queryString from 'query-string'
+
+import { useLocation } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm';
 import { getHeroesByName } from '../../selectors/getHeroesByName';
 import { HeroCard } from '../heroes/HeroCard';
 
-export const SearchScreen = () => {
+export const SearchScreen = ({ history }) => {
 
-    const [heroesFiltered, setHeroesFiltered] = useState(heroes);
-    const [ filter, handleFilterChange, resetFilter ] = useForm({
-        name: ''
+    const location = useLocation();
+    const { q = '' } = queryString.parse( location.search );
+
+    const [ filter, handleFilterChange ] = useForm({
+        name: q
     });
     const { name } = filter;
 
+    const heroesFiltered =  useMemo(() => getHeroesByName( q ), [q])
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         
-        setHeroesFiltered( getHeroesByName(name) );
-
-        resetFilter();
+        history.push(`?q=${name}`);
     }
 
 
@@ -56,6 +60,22 @@ export const SearchScreen = () => {
 
                     <h4>Results</h4>
                     <hr/>
+
+                    {   
+                        (q==='')
+                            &&
+                            <div className="alert alert-info">
+                                Search a hero
+                            </div>
+                    }
+
+                    {
+                        (q!=='' && heroesFiltered.length === 0)
+                            &&
+                            <div className="alert alert-danger">
+                                There is no a hero with { q }
+                            </div>
+                    }
 
                     <div className="animate__animated animate__fadeInRight">
                     {
