@@ -57,6 +57,7 @@ export const SearchScreen = () => {
                     <h4>Results</h4>
                     <hr/>
 
+                    <div className="animate__animated animate__fadeInRight">
                     {
                         heroesFiltered.map( hero => (
                             <HeroCard
@@ -65,6 +66,8 @@ export const SearchScreen = () => {
                             />
                         ))
                     }
+                    </div>
+            
                 </div>   
            </div> 
         </div>
