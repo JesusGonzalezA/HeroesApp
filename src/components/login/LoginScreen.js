@@ -7,8 +7,8 @@ export const LoginScreen = ({history}) => {
     }
 
     return (
-        <div>
-            <h1>LoginScreen</h1>
+        <div className="m-5">
+            <h1>Login</h1>
             <hr/>
 
             <button
