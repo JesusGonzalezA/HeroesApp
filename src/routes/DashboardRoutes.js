@@ -11,7 +11,7 @@ export const DashboardRoutes = () => {
         <>
             <Navbar />
 
-            <div className="container m-5">
+            <div className="container mt-5 text-center">
                 <Switch>
                     <Route exact path="/marvel" component={MarvelScreen} />
                     <Route exact path="/dc" component={DcScreen} />
