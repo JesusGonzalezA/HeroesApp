@@ -2,6 +2,7 @@
 This is a serverless application made with React. \
 You can search some heroes by name and see relative information about them.
 
+ https://jesusgonzaleza.github.io/HeroesApp/
 ![](HeroesApp.gif)
 
 
