@@ -58,7 +58,7 @@ export const Navbar = () => {
 
             <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 justify-content-end">
                 <ul className="navbar-nav">
-                    <li className="nav-item nav-link mr-5" disabled>Hi {user.name}!</li>
+                    <li className="nav-item nav-link  text-info mr-5" disabled>Hi {user.name}!</li>
                     <li>
                         <NavLink 
                             activeClassName="active"
