@@ -2,6 +2,9 @@
 This is a serverless application made with React. \
 You can search some heroes by name and see relative information about them.
 
+![](HeroesApp.gif)
+
+
 ## :star: What I've learnt...
 
 :+1: Private routes \
@@ -12,7 +15,3 @@ You can search some heroes by name and see relative information about them.
 
 :microscope: **Tests**: You can find them in src/tests. I used Jest and Enzyme for this issue. \
 :warning: **The images are heavy.**
-
-
-
-![](HeroesApp.gif)
