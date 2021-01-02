@@ -10,7 +10,7 @@ You can search some heroes by name and see relative information about them.
 :+1: UseContext and Provider \
 :+1: Bootstrap \
 
-:microscope: **Tests**: You can find them in src/tests. I used Jest and Enzyme for this issue.
+:microscope: **Tests**: You can find them in src/tests. I used Jest and Enzyme for this issue. \
 :warning: **The images are heavy.**
 
 
