@@ -41,6 +41,19 @@ describe('Testing Login component', () => {
 
         expect( history.replace ).toHaveBeenCalled();
     })
+
+    test('should redirect to the last visited page', () => {
+        
+        const handleClick = wrapper.find('button').prop('onClick');
+
+        handleClick();
+        expect( history.replace ).toHaveBeenCalledWith('/');
+
+        localStorage.setItem('lastPath', '/dc');
+        handleClick();
+        expect( history.replace ).toHaveBeenCalledWith('/dc');
+    })
+    
     
     
 })
